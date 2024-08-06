@@ -74,8 +74,15 @@ const MobileMenu = styled.ul`
     list-style: none;
     width: 90%;
     padding: 12px 40px 24px 40px;
-    background: ${({ theme }) => theme.card_light}
+    background: ${({ theme }) => theme.card_light + 99}
     position: absolute;
+    top: 80px;
+    right: 0;
+    transition: all 0.6s ease-in-out;
+    transform: ${({ isOpen }) => 
+        isOpen ? "tranlateY(0)" : "translateY(-100%)"
+    };
+    
 
 
 `;
